@@ -1,104 +1,160 @@
 @font-face {
     font-family: 'block';
-    src: local('block'), url(./assets/Bloodbank-UI/block.ttf) format('truetype');
+    src: local('block'), url(./assets/fonts/block.ttf) format('truetype');
   }
 
-.body {
-    display:block;
-    margin:8px;
-}
+  @font-face {
+    font-family: 'BebasNeue';
+    src: local('BebasNeue'), url(./assets/fonts/BebasNeue-Regular.ttf) format('truetype');
+  }
 
-.timer{
+.artist h2{
+    padding-top: 30px;
+    font-family: 'block';
+}
+.artist a{
+    font-family: 'BebasNeue';   
+  }
+.artist a:link {
+    color: rgb(50, 50, 50);
+    text-decoration: none;
+  }
+  
+  /* visited link */
+.artist a:visited {
+    color: black;
+    text-decoration: none;
+  }
+  
+  /* mouse over link */
+.artist a:hover {
+    color: maroon;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  /* selected link */
+.artist a:active {
+    color: black;
+    text-decoration: none;
+  }
+
+
+ .timer{
+    display:inline-flex;
     font-family: 'block';
     color: #fff;
     background-color: #000;
     font-size: 34px;
     line-height: 1;
-    padding: 2px 8px 3px;
+    padding: 8px 8px 8px 8px;
+    margin-right:20px;
 } 
 
-.full-timer {
-    top: 64px;
-}
 
-
-.img {
-    width: 200px;
-    height: 200px;
-}
-
-/* Style the header with a grey background and some padding */
-.header {
-    background-color: #f1f1f1;
-  }
-  
-  
-  .timer {
-    display: inline-block;
-    font-family: Block;
-    color: #fff;
-    background-color: #000;
-    font-size: 34px;
-    line-height: 1;
-    padding: 8px 8px 3px;
+.f-container h1{
+    font-family: 'block';
+    display: inline-flex;
 }
   
+.img{
+width:150px;
+}
   
-.logo-gif {
-    top: -9px;
-} 
+.imgHeader{
+    width:250px;
+}
+
+
+html,
+body{
+  margin: 0;
+  padding: 0;
+}
+.f-container{
+  height: 100vh; /* for shorter content */
+  display: flex;
+  flex-direction: column;
+    
+  /*ie10*/
+  display: -ms-flexbox;
+  -ms-flex-direction: column;
+}
+
+.main{
+  flex: 1;
   
-.logo-gif img {
-    width: 100%;
+  /*ie10*/
+  -ms-flex: 1 1 auto; /*needs both shrink and grow*/
 }
 
-.pd-address-logo {
-    position: fixed;
-    z-index: 20;
-    top: 65px;
-    right: var(--unit-gap);
-    width: 235px;
+header,
+footer{
+  flex-basis: 50px;
+  
+  /*ie10*/
+  -ms-flex-preferred-size: 50px;
+  
+  /*center align of links*/
+  display: flex;
+  align-items: center; /*vertical*/
+  justify-content: space-around; /*or space-between*/
+  /*ie10*/
+  display: -ms-flexbox;
+  -ms-flex-align: center; /*vertical*/
+  -ms-flex-line-pack: distribute; /*or justify*/
 }
 
-
-  .bg {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    top: 0;
-    top: 100px;
-    height: 80vh;
-    max-height: 350px;
-    z-index: -1;
+footer {
+  /*ie10 short content*/
+  margin-top: auto; 
+}
+header a{
+  display: inline-block;
+}
+.fixed-hf .main{
+  overflow-y: auto;
 }
 
-@media (min-width: 768px){
-    .bg {
-        top: 25%;
-        bottom: 25%;
-        height: auto;
-        max-height: none;
+@media (max-width: 425px){
+        .imgHeader{
+            width: 200px;
+        }
+        
+        .img{
+            width:200px;
+        }
     }
-}
-
-@media (min-width: 1024px){
-
-    .pd-address-logo {
-        width: 303px;
+    
+    
+    .footer h2{
+        padding-top: 30px;
+        font-family: 'block';
     }
-
-    .logo-gif {
-        position: fixed;
-        z-index: 20;
-        top: -14px;
-        left: 50%;
-        width: 191px;
-        transform: translateX(-50%);
-    }
-
-    .full-timer {
-        top: 64px;
-    }
-}
-
+    .footer a{
+        font-family: 'BebasNeue';   
+      }
+    .footer a:link {
+        color: rgb(50, 50, 50);
+        text-decoration: none;
+      }
+      
+      /* visited link */
+    .footer a:visited {
+        color: black;
+        text-decoration: none;
+      }
+      
+      /* mouse over link */
+    .footer a:hover {
+        color: maroon;
+        font-weight: bold;
+        text-decoration: none;
+      }
+      
+      /* selected link */
+    .footer  a:active {
+        color: black;
+        text-decoration: none;
+      }
+    
