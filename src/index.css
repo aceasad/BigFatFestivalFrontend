@@ -197,4 +197,24 @@ header a{
         color: black;
         text-decoration: none;
       }
+
+      .getqrcode{
+        text-align: center;
+        transform: scale(1);
+        animation: pulse-black 2s infinite;
+      }
+    
+      @keyframes pulse-black {
+        0% {
+            transform: scale(0.95);
+        }
+        
+        70% {
+            transform: scale(1);
+        }
+        
+        100% {
+            transform: scale(0.95);
+        }
+    }
     

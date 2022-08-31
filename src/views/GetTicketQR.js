@@ -18,15 +18,15 @@ const config = {
 };
 
 const GetTicketQR = () => {
-    const [error, setError] = useState({})
+    const [error, setError] = useState("")
     const [qrCode, setQRcode] = useState("")
-
+    const [show, setShow] = useState(false);
     const handleSubmit = (event) => {
         event.preventDefault();
         const data = new FormData(event.currentTarget);
         // POST REQUEST TO API 
         axios.get("http://13.235.83.97:4242/api/userticket", { params: { email: data.get('Email') } }).then(res => {
-            console.log(res.data)
+            console.log(res.data.message)
             try {
                 aws.config = config;
                 const s3 = new aws.S3()
@@ -35,13 +35,17 @@ const GetTicketQR = () => {
                 var promise = s3.getSignedUrlPromise('getObject', params);
                 promise.then((url) => {
                     setQRcode(url)
+                    setShow(true)
                     console.log(url)
                 }, (err) => {
                     console.log(err)
+                    setError(res.data.message)
+
                 });
 
             } catch (err) {
                 console.warn(err);
+                setError(res.data.message)
             }
 
         })
@@ -59,9 +63,9 @@ const GetTicketQR = () => {
                         alignItems: 'center',
                     }}
                 >
-                    <Typography component="h1" variant="h5">
+                    <h1 style={{ fontFamily: 'BebasNeue' }}>
                         Get Ticket Pass QR
-                    </Typography>
+                    </h1>
                     <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
                         <TextField
                             margin="normal"
@@ -72,17 +76,19 @@ const GetTicketQR = () => {
                             name="Email"
                             autoFocus
                         />
+                        <h2 style={{ textAlign: "center" }}>{error}</h2>
+
                         <Button
                             type="submit"
                             fullWidth
                             variant="contained"
                             sx={{ mt: 3, mb: 2 }}
                         >
-                            Create Ticket
+                            Get QR Ticket
                         </Button>
                         <Grid container>
                             <Grid item>
-                                <img alt="qrCode" src={qrCode}></img>
+                                {show ? (<img alt="qrCode" src={qrCode}></img>) : (<></>)}
                             </Grid>
                         </Grid>
                     </Box>

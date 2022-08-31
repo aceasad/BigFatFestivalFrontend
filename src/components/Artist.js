@@ -22,9 +22,11 @@ const Artist = () => {
                 <a>VIVID</a>
                 <a>HAIDAR UPPAL</a>
                 <h5>-----------</h5>
-                <a href="/getTicketQr">
-                    <p style={{ fontFamily: 'BebasNeue' }}>Get your QR Code from here see you at the venue!</p>
-                </a>
+                <div className="getqrcode">
+                    <a href="/getTicketQr">
+                        <p style={{ fontFamily: 'BebasNeue', color: "maroon" }}>Get your QR Code from here see you at the venue!</p>
+                    </a>
+                </div>
             </Stack>
         </Container>)
 }

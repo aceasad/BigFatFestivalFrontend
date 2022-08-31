@@ -16,7 +16,7 @@ ReactDOM.render(
       <Route path="/updateTicket" component={UpdateTicket} />
       <Route path="/getTicketQr" component={GetTicketQR} />
       <Route path="/deleteTicket" component={DeleteTicket} />
-      <Route path="/admin" component={Admin}></Route>
+      <Route path="/bigfatadminpanel" component={Admin}></Route>
     </Switch>
   </BrowserRouter>,
   document.getElementById("root")
