@@ -1,10 +1,15 @@
+@font-face {
+    font-family: 'block';
+    src: local('block'), url(./assets/Bloodbank-UI/block.ttf) format('truetype');
+  }
+
 .body {
     display:block;
     margin:8px;
 }
 
 .timer{
-    font-family: Block;
+    font-family: 'block';
     color: #fff;
     background-color: #000;
     font-size: 34px;
