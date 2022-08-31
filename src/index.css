@@ -1,0 +1,99 @@
+.body {
+    display:block;
+    margin:8px;
+}
+
+.timer{
+    font-family: Block;
+    color: #fff;
+    background-color: #000;
+    font-size: 34px;
+    line-height: 1;
+    padding: 2px 8px 3px;
+} 
+
+.full-timer {
+    top: 64px;
+}
+
+
+.img {
+    width: 200px;
+    height: 200px;
+}
+
+/* Style the header with a grey background and some padding */
+.header {
+    background-color: #f1f1f1;
+  }
+  
+  
+  .timer {
+    display: inline-block;
+    font-family: Block;
+    color: #fff;
+    background-color: #000;
+    font-size: 34px;
+    line-height: 1;
+    padding: 8px 8px 3px;
+}
+  
+  
+.logo-gif {
+    top: -9px;
+} 
+  
+.logo-gif img {
+    width: 100%;
+}
+
+.pd-address-logo {
+    position: fixed;
+    z-index: 20;
+    top: 65px;
+    right: var(--unit-gap);
+    width: 235px;
+}
+
+
+  .bg {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    top: 100px;
+    height: 80vh;
+    max-height: 350px;
+    z-index: -1;
+}
+
+@media (min-width: 768px){
+    .bg {
+        top: 25%;
+        bottom: 25%;
+        height: auto;
+        max-height: none;
+    }
+}
+
+@media (min-width: 1024px){
+
+    .pd-address-logo {
+        width: 303px;
+    }
+
+    .logo-gif {
+        position: fixed;
+        z-index: 20;
+        top: -14px;
+        left: 50%;
+        width: 191px;
+        transform: translateX(-50%);
+    }
+
+    .full-timer {
+        top: 64px;
+    }
+}
+
