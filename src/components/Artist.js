@@ -4,7 +4,7 @@ const Artist = () => {
 
     return (
         <Container style={{ flexDirection: 'column', justifyContent: 'center' }}>
-            <Stack className="artist">
+            <Stack style={{ textAlign: "center" }} className="artist">
                 <h2>ARTIST LINEUP</h2>
                 <a href="https://instagram.com/nael440">INDENIAL</a>
                 <a >MUSTI</a>
@@ -17,11 +17,14 @@ const Artist = () => {
                 <a href="https://instagram.com/abdulhannanmusic">HANNAN </a>
 
                 <h2>DJ LINEUP</h2>
-                <a  >MBM</a>
-                <a  >FUZZY</a>
-                <a  >VIVID</a>
-                <a  >HAIDAR UPPAL</a>
-
+                <a>MBM</a>
+                <a>FUZZY</a>
+                <a>VIVID</a>
+                <a>HAIDAR UPPAL</a>
+                <h5>-----------</h5>
+                <a href="/getTicketQr">
+                    <p style={{ fontFamily: 'BebasNeue' }}>Get your QR Code from here see you at the venue!</p>
+                </a>
             </Stack>
         </Container>)
 }

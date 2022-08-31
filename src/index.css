@@ -115,15 +115,55 @@ header a{
 .fixed-hf .main{
   overflow-y: auto;
 }
-
-@media (max-width: 425px){
+@media (max-width: 1025px){
+    .f-container{
+        height: 100vh; /* for shorter content */
+        display: flex;
+        flex-direction: column;
+          
+        /*ie10*/
+        display: -ms-flexbox;
+        -ms-flex-direction: column;
+      }
+      
         .imgHeader{
             width: 200px;
+            margin-right: 60px;
         }
         
         .img{
-            width:200px;
+            width:150px;
         }
+    }
+
+@media (max-width: 426px){
+    .f-container{
+        height: 100vh; /* for shorter content */
+        display: flex;
+        flex-direction: column;
+          
+        /*ie10*/
+        display: -ms-flexbox;
+        -ms-flex-direction: column;
+      }
+      
+        .imgHeader{
+            width: 0;
+        }
+        
+        .img{
+            width:0;
+        }
+        .timer{
+            display:inline-flex;
+            font-family: 'block';
+            color: #fff;
+            background-color: #000;
+            font-size: 34px;
+            line-height: 1;
+            margin-top:40px;
+        } 
+        
     }
     
     
