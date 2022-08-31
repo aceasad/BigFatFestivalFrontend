@@ -1,24 +1,11 @@
 import react, { useState } from 'react'
-import { Avatar, Stack, Container, Typography, LockOutlinedIcon, Button, CssBaseline, TextField, FormControlLabel, Checkbox, Link, Grid, Box } from '@mui/material';
+import { InputLabel, MenuItem, Container, Typography, Button, CssBaseline, TextField, Grid, Box } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-
+import Select, { SelectChangeEvent } from '@mui/material/Select';
 import aws from 'aws-sdk';
 import axios from 'axios'
 
 const theme = createTheme();
-
-function Copyright(props) {
-    return (
-        <Typography variant="body2" color="text.secondary" align="center" {...props}>
-            {'Copyright © '}
-            <Link color="inherit" href="https://mui.com/">
-                Your Website
-            </Link>{' '}
-            {new Date().getFullYear()}
-            {'.'}
-        </Typography>
-    );
-}
 
 const config = {
     bucketName: "big-fat-festival-ticket",
@@ -33,6 +20,10 @@ const CreateTicket = () => {
     const [error, setError] = useState({})
     const [res, setRes] = useState("")
     const [qrCode, setQRcode] = useState("")
+    const [pass, setPass] = useState("")
+    const handleChange = (event) => {
+        setPass(event.target.value);
+    };
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -41,7 +32,7 @@ const CreateTicket = () => {
         const params = {
             "email": data.get('Email'),
             "name": data.get('Name'),
-            "pass_type": data.get("Pass_Type")
+            "pass_type": pass
         }
         axios.post("http://13.235.83.97:4242/api/userticket", params).then(res => {
             setRes(res.data.message)
@@ -99,15 +90,17 @@ const CreateTicket = () => {
                             type="text"
                             id="text"
                         />
-                        <TextField
-                            margin="normal"
-                            required
-                            fullWidth
-                            name="Pass_Type"
-                            label="Pass Type"
-                            type="text"
+                        <InputLabel id="demo-simple-select-label">Ticket</InputLabel>
+                        <Select
+                            labelId="text"
                             id="text"
-                        />
+                            label="Pass Type"
+                            onChange={handleChange}
+                        >
+                            <MenuItem value={"General access "}>General access </MenuItem>
+                            <MenuItem value={"FNF"}>FNF</MenuItem>
+                            <MenuItem value={"VIP"}>VIP</MenuItem>
+                        </Select>
 
                         <Button
                             type="submit"
