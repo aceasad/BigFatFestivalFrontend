@@ -11,12 +11,12 @@ import Admin from './views/Admin'
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
-      <Route path="/home" component={Main} />
+      <Route exact path="/" component={Main} />
       <Route path="/createTicket" component={CreateTicket} />
       <Route path="/updateTicket" component={UpdateTicket} />
       <Route path="/getTicketQr" component={GetTicketQR} />
       <Route path="/deleteTicket" component={DeleteTicket} />
-      <Route exact path="/" component={Admin}></Route>
+      <Route path="/admin" component={Admin}></Route>
     </Switch>
   </BrowserRouter>,
   document.getElementById("root")
