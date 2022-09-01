@@ -7,20 +7,20 @@ const Artist = () => {
             <Stack style={{ textAlign: "center" }} className="artist">
                 <h2>ARTIST LINEUP</h2>
                 <a href="https://instagram.com/nael440">INDENIAL</a>
-                <a >MUSTI</a>
+                <a href="https://instagram.com/mustisphotos/">MUSTI</a>
                 <a href="https://instagram.com/scamusic_">SCAM MUSIC</a>
                 <a href="https://instagram.com/izzchughtaimusic">IZZ CHUGTAI</a>
                 <a href="https://instagram.com/aleeboyondabeat">ALISTAIR ALVIN</a>
                 <a href="https://instagram.com/marshallahmadd">MARSHALL AHMAD</a>
-                <a href="https://instagram.com/alemamelghandour">AIEMAN EIGHANDAUR</a>
+                <a href="https://instagram.com/alemamelghandour">ALEMAM EIGHANDAUR</a>
                 <a href="https://instagram.com/hassanbaigmusicx">HASSAM BAIG</a>
-                <a href="https://instagram.com/abdulhannanmusic">HANNAN </a>
+                <a href="https://instagram.com/abdulhannanmusic">ABDUL HANNAN</a>
 
                 <h2>DJ LINEUP</h2>
-                <a>MBM</a>
-                <a>FUZZY</a>
-                <a>VIVID</a>
-                <a>HAIDAR UPPAL</a>
+                <a href="https://www.instagram.com/mbm__music">MBM</a>
+                <a href="https://www.instagram.com/fuzzynocturnal">FUZZY</a>
+                <a href="https://www.instagram.com/v_i_v_i_d__">VIVID</a>
+                <a href="https://www.instagram.com/moodroomcrew">HAIDAR UPPAL</a>
                 <h5>-----------</h5>
                 <div className="getqrcode">
                     <a href="/getTicketQr">
