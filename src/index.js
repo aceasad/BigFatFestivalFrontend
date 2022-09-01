@@ -12,7 +12,7 @@ ReactDOM.render(
   <BrowserRouter>
     <Switch>
       <Route exact path="/" component={Main} />
-      <Route path="/createTicket" component={CreateTicket} />
+      <Route path="/createTicketforBigFatFestival" component={CreateTicket} />
       <Route path="/updateTicket" component={UpdateTicket} />
       <Route path="/getTicketQr" component={GetTicketQR} />
       <Route path="/deleteTicket" component={DeleteTicket} />
