@@ -95,7 +95,7 @@ const CreateTicket = () => {
                             labelId="text"
                             id="text"
                             label="Pass Type"
-                            onChange={handleChange}
+                            onChange={() => handleChange}
                         >
                             <MenuItem value={"General access "}>General access </MenuItem>
                             <MenuItem value={"FNF"}>FNF</MenuItem>
