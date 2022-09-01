@@ -23,7 +23,7 @@ const Admin = () => {
                         Big Fat Festival Admin Panel
                     </Typography>
                     <Stack sx={{ mt: 1 }}>
-                        <a href='/createTicket'>
+                        <a href='/createTicketforBigFatFestival'>
                             Create A New Ticket
                         </a>
 
